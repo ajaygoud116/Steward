@@ -155,6 +155,7 @@ class MissionRuntime:
         journal("mission_record", "success", summary="Mission record saved")
 
         mission_status = self.gate.get_status(mid) if hasattr(self.gate, "get_status") else record.status
+        needs_clarification = len(intent_dict.get("missing_fields", [])) > 0
         result = ExecutionResult(
             user_input=user_input,
             intent=intent_dict,
@@ -165,6 +166,7 @@ class MissionRuntime:
             journal=j_entries,
             summary=summary,
             cognis_preferences=cognis,
+            needs_clarification=needs_clarification,
         )
 
         outcome = {
