@@ -37,3 +37,4 @@ class ExecutionResult:
     summary: str = ""
     cognis_preferences: str = ""
     memory_result: Optional[dict] = None
+    needs_clarification: bool = False
