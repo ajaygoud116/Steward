@@ -1,5 +1,61 @@
-.env
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
 .venv/
 venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*
+!.env.example
+
+# Runtime data
+data/
+logs/
+*.log
+
+# Demo presentation notes (not needed for public consumption)
+demo/
+
+# Internal review documents
+BLUEPRINT.md
+BRUTAL_REVIEW.md
+ARCHITECTURE_AUDIT.md
+CODE_VERIFICATION.md
+ENGINEERING_EVIDENCE_REPORT.md
+FAILURE_MATRIX.md
+SUPERFLOW_STAGES.md
+TEST_AUDIT.md
+
+# Generated evidence
+coverage.xml
+
+# Test artifacts
+*.prof
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Secrets
+*.pem
+*.key
+*.crt
