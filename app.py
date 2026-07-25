@@ -81,7 +81,13 @@ class ExplainRequest(BaseModel):
 
 @app.get("/")
 def root():
-    return {"product": "Mission Engine", "version": "1.0"}
+    return {
+    "product": "Steward",
+    "engine": "Mission Engine",
+     "version": "1.0",
+    "status": "running"
+    }   
+    
 
 
 # ── Health ──
