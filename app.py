@@ -108,20 +108,7 @@ def plan_trip(req: ChatRequest):
         session_id=session_id,
         workflow_type=WorkflowType.TRAVEL,
     )
-
-    if response.type == "clarification":
-        plan = response.data
-        return ClarificationResponse(
-            clarification_question=plan.clarification_question,
-            missing_fields=plan.missing_fields,
-            partial_plan=plan.model_dump(exclude={"clarification_question", "missing_fields", "is_complete"}),
-            session_id=session_id,
-        )
-
-    if response.type == "plan":
-        return PlanResponse(plan=response.data, session_id=session_id)
-
-    return ChatResponse(type="error", session_id=session_id)
+    return response
 
 
 # ── Phase 2: Manager Agent Modes ──
