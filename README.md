@@ -1,3 +1,29 @@
+# Steward is an Autonomous Personal Operations Agent that converts high-level goals into safe, explainable, multi-step task execution.
+
+## Users describe what they want. Steward decides how to accomplish it through structured planning, deterministic execution, approval for irreversible actions, and evidence-backed explanations.
+
+### What Steward Does
+
+Example: "Book me a trip to Goa next weekend under ₹20,000."
+
+Steward:
+
+Understands the request.
+Detects missing information.
+Builds an execution plan.
+Searches flights and hotels.
+Validates constraints.
+Ranks alternatives.
+Requests approval.
+Executes booking.
+Explains every decision.
+
+That's far more compelling than another architecture diagram.
+
+
+
+
+
 # Mission Engine — Reusable Workflow Runtime
 
 A deterministic execution runtime that separates **engine** from **workflow**.
@@ -287,6 +313,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for full instructions (local, Docker, cloud, 
 
 ## Future Workflows (Not Implemented)
 
+### MissionRuntime is workflow-independent. TravelWorkflow is the reference implementation used to validate the architecture.
 Only `TravelWorkflow` exists. The following workflows are candidates that
 would implement the same `MissionWorkflow` contract without modifying the
 runtime:
@@ -304,8 +331,8 @@ Adding any of these requires only a new `workflow.py` file and a
 
 | Suite | Count | Status |
 |-------|-------|--------|
-| Core engine tests | 300 | ✅ All passed |
-| Architectural tests | 14 | ✅ All passed |
+| Core engine tests | 300 |  All passed |
+| Architectural tests | 14 |  All passed |
 | Warnings | 5 | Benign Pydantic v1 deprecations |
 
 ## Project Status
